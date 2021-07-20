@@ -16,7 +16,7 @@ public class DiceScript : MonoBehaviour
     {
         diceVelocity = rb.velocity;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetTouch(0).phase==TouchPhase.Began)
         {
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
